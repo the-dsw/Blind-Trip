@@ -3,8 +3,9 @@ angular.module('blindTrip')
     '$scope',
     'users',
     function($scope, users) {
-
+        users.getAll();
         $scope.users = users.users;
+        console.log($scope.users);
 
         $scope.addPost = function() {
           if(!$scope.name || $scope.name === '' && !$scope.email || $scope.email === '') { return; }

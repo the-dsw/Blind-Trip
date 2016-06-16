@@ -1,24 +1,14 @@
 <div class="page-header">
-  <h1>Flapper News</h1>
-</div>
-
-<div ng-repeat="user in users">
-  <span style="font-size:20px; margin-left:10px;">
-    <a ng-show="user.email" href="{{user.email}}">
-      {{user.name}}
-    </a>
-    <span ng-hide="user.email">
-      {{user.name}}
-    </span>
-  </span>
-  <span>
-    <a href="#/users/{{user.id}}">Comments</a>
-  </span>
+  <h1>Blind Trip</h1>
 </div>
 
 <form ng-submit="addUser()"
   style="margin-top:30px;">
   <h3>Add a new user</h3>
+
+  <div ng-repeat="user in users">
+    {{user.name}} -- {{user.email}}
+  </div>
 
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Name" ng-model="name"></input>
