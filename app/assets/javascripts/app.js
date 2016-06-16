@@ -1,3 +1,4 @@
+
 angular.module('blindTrip', ['ui.router', 'templates'])
     .config([
         '$stateProvider',
