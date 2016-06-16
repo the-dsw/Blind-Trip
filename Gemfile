@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'materialize-sass'
 gem 'responders'
 gem 'angular_rails_csrf'
 gem 'angular-rails-templates'

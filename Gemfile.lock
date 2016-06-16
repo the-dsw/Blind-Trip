@@ -62,6 +62,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    materialize-sass (0.97.6)
+      sass (~> 3.3)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -144,6 +146,7 @@ DEPENDENCIES
   angular_rails_csrf
   byebug
   jbuilder (~> 2.0)
+  materialize-sass
   rails (= 4.2.6)
   responders
   sass-rails (~> 5.0)
