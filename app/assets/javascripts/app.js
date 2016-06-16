@@ -1,4 +1,4 @@
-angular.module('blindTrip', ['ui.router'])
+angular.module('blindTrip', ['ui.router', 'templates'])
   .config([
   '$stateProvider',
   '$urlRouterProvider',
@@ -6,7 +6,7 @@ angular.module('blindTrip', ['ui.router'])
   $stateProvider
     .state('home', {
       url: '/home',
-      templateUrl: '/home.html', 
+      templateUrl: 'views/home/_home.html', 
       controller: 'MainCtrl',
     })
   $urlRouterProvider.otherwise('home');
