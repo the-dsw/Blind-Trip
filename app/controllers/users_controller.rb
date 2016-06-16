@@ -4,6 +4,10 @@ class UsersController < ApplicationController
     respond_with User.all
   end
 
+  def new
+    respond_with User.new
+  end
+
   def create
     respond_with User.create(user_params)
   end
