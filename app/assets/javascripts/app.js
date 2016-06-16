@@ -6,8 +6,8 @@ angular.module('blindTrip', ['ui.router'])
   $stateProvider
     .state('home', {
       url: '/home',
-      templateUrl: '/home.html', 
+      templateUrl: '/home.html',
       controller: 'MainCtrl',
-    })
+    });
   $urlRouterProvider.otherwise('home');
 }]);
