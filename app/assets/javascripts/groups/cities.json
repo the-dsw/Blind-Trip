@@ -1,0 +1,78 @@
+{
+  "international": {
+    "mountain": {
+      "hot": [
+        "Sarajevo",
+        "Belgrade",
+        "Petrosani"
+      ],
+      "cold": [
+        "Alesjaurestugorna",
+        "Beistostolen",
+        "Moskenes"
+      ]
+    },
+    "beach": {
+      "hot": [
+        "Malaga",
+        "Crotone",
+        "Dubrovnik"
+      ],
+      "cold": [
+        "Liepaja",
+        "Ventspils",
+        "Oulu"
+      ]
+    },
+    "outback": {
+      "hot": [
+        "Madrid",
+        "Kraljevo",
+        "Trojan"
+      ],
+      "cold": [
+        "Berlin",
+        "Daugavpils",
+        "Tampere"
+      ]
+    }
+  },
+  "national": {
+    "mountain": {
+      "cold": [
+        "Gaschney",
+        "Belfort",
+        "Montesquieu"
+      ],
+      "hot": [
+        "Chamonix",
+        "Beille",
+        "Valberg"
+      ]
+    },
+    "beach": {
+      "hot": [
+        "Cannes",
+        "Bonifacio",
+        "Arcachon",
+        "Biarritz"
+      ],
+      "cold": [
+        "Brest",
+        "Deauville"
+      ]
+    },
+    "outback": {
+      "hot": [
+        "Rodez",
+        "Agen",
+        "Yssingeaux"
+      ],
+      "cold": [
+        "Chartres",
+        "Paris",
+        "Nancy"
+      ]
+    }
+  }
+}

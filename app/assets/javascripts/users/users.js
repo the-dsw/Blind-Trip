@@ -11,9 +11,7 @@ angular.module('blindTrip')
        };
 
        o.create = function(user) {
-          return $http.post('/users.json', user);/*.success(function(data){
-            o.users.push(data);
-          });*/
+          return $http.post('/users.json', user);
         };
 
         o.get = function(id) {

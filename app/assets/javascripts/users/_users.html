@@ -2,8 +2,7 @@
   <h1>Blind Trip</h1>
 </div>
 
-<form ng-submit="addUser()"
-  style="margin-top:30px;">
+<form style="margin-top:30px;">
   <h3>Add a new user</h3>
 
   <div class="form-group">
@@ -12,9 +11,5 @@
   <div class="form-group">
     <input type="email" class="form-control" placeholder="Email" ng-model="email"></input>
   </div>
-  <button type="submit" class="btn btn-primary" ng-click='addPost()'>User</button>
+  <button type="submit" class="btn btn-primary" ng-click='addPost()'>Add user</button>
 </form>
-
-<div ng-repeat="user in users">
-  {{user.name}} -- {{user.email}}
-</div>

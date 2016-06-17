@@ -1,0 +1,28 @@
+body {
+    padding-top: 70px;
+    background: url(image/bg.jpg) no-repeat center fixed;
+    background-image: image-url('route66.jpg');
+    background-size: cover;
+}
+.control-label {
+    font-size: 1.2em;
+    color: white;
+}
+.imgTitle {
+    width: 50%;
+    text-align: center;
+    margin-top: -40px;
+}
+.title {
+    text-align: center;
+}
+.border {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+.addGroup {
+  padding: 15px;
+}

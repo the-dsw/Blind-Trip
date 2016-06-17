@@ -1,11 +1,11 @@
 angular.module('blindTrip')
-  .controller('MainCtrl', [
+  .controller('userCtrl', [
     '$scope',
     'users',
     function($scope, users) {
         users.getAll();
         $scope.users = users.users;
-        
+
         $scope.addPost = function() {
           if(!$scope.name || $scope.name === '' && !$scope.email || $scope.email === '') { return; }
             users.create({
