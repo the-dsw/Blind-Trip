@@ -8,9 +8,14 @@ angular.module('blindTrip', ['ui.router', 'templates'])
                 .state('users', {
                     url: '/users',
                     templateUrl: 'users/_users.html',
-                    controller: 'MainCtrl'
+                    controller: 'userCtrl'
+                })
+                .state('groups', {
+                    url: '/groups',
+                    templateUrl: 'groups/_groups.html',
+                    controller: 'groupCtrl'
                 });
 
-            $urlRouterProvider.otherwise('users');
+            $urlRouterProvider.otherwise('groups');
         }
     ]);
