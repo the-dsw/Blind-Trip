@@ -8,7 +8,12 @@ angular.module('blindTrip', ['ui.router', 'templates'])
                 .state('users', {
                     url: '/users',
                     templateUrl: 'users/_users.html',
-                    controller: 'userCtrl'
+                    controller: 'userCtrl',
+                    resolve: {
+                        param1: function(transferts) {
+                            return transferts;
+                        }
+                    }
                 })
                 .state('counters', {
                     url: '/counters',
@@ -16,6 +21,6 @@ angular.module('blindTrip', ['ui.router', 'templates'])
                     controller: 'counterCtrl'
                 });
 
-            $urlRouterProvider.otherwise('counters');
+            $urlRouterProvider.otherwise('users');
         }
     ]);

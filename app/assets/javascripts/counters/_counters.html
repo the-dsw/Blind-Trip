@@ -2,7 +2,7 @@
 
 <!-- home -->
 <div class="addGroup" ng-show="view=='createBtn'">
-  <button type="button" class="btn btn-lg btn-info col-sm-offset-8" ng-click="view = 'newGroup'; addGroupName()">CRÉER UN GROUPE</button>
+  <button type="button" class="btn btn-lg btn-info col-sm-offset-8" ng-click="view = 'newGroup'">CRÉER UN GROUPE</button>
   <!-- {{users}} -->
 </div>
 
@@ -22,87 +22,15 @@
                 <input type="text" class="form-control" id="inputCreateur" placeholder="Nom du Groupe" ng-model="createur">
             </div>
         </div>
-
-        <div class="form-group">
-            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-            <div class="col-sm-8">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="email">
-            </div>
-        </div>
     </form>
     <br/>
-    <form class="form-horizontal">
-        <div class="form-group">
-            <label for="inputAmi1" class="col-sm-2 control-label">Ami 1</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputAmi1" placeholder="Ton nom" ng-model="ami1">
-            </div>
-        </div>
+    
+    <div ng-repeat="user in users">
+      {{user.name}} -- {{user.email}}
+    </div>
 
-        <div class="form-group">
-            <label for="inputAmi2" class="col-sm-2 control-label">Ami 2</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputAmi2" placeholder="Ton nom" ng-model="ami2">
-            </div>
-        </div>
 
-        <div class="form-group">
-            <label for="inputAmi3" class="col-sm-2 control-label">Ami 3</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputAmi3" placeholder="Ton nom" ng-model="ami3">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="inputAmi4" class="col-sm-2 control-label">Ami 4</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputAmi4" placeholder="Ton nom" ng-model="ami4">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="inputAmi5" class="col-sm-2 control-label">Ami 5</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputAmi5" placeholder="Ton nom" ng-model="ami5">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="inputAmi6" class="col-sm-2 control-label">Ami 6</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputAmi6" placeholder="Ton nom" ng-model="ami6">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="inputAmi7" class="col-sm-2 control-label">Ami 7</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputAmi7" placeholder="Ton nom" ng-model="ami7">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="inputAmi8" class="col-sm-2 control-label">Ami 8</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputAmi8" placeholder="Ton nom" ng-model="ami8">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="inputAmi9" class="col-sm-2 control-label">Ami 9</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputAmi9" placeholder="Ton nom" ng-model="ami9">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputAmi10" class="col-sm-2 control-label">Ami 10</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputAmi10" placeholder="Ton nom" ng-model="ami10">
-            </div>
-        </div>
-    </form>
-
-    <button type="button" class="btn btn-success col-sm-offset-2 col-sm-8 paddingBottom" ng-click="view = 'choises'">ENVOYER</button>
+    <button type="button" class="btn btn-success col-sm-offset-2 col-sm-8 paddingBottom" ng-click="view = 'choises'; addGroupName()">ENVOYER</button>
 </div>
 
 <!-- choises -->
