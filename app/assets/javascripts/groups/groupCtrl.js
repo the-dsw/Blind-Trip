@@ -93,36 +93,38 @@ angular.module('blindTrip')
           groups.getAll();
           $scope.groups = groups.groups;
 
-          $scope.countPlace = 0;
-          $scope.countMontagne = 0;
-          $scope.countVert = 0;
-          $scope.countFroid = 0;
-          $scope.countChaud = 0;
-          $scope.countFrance = 0;
-          $scope.countEtranger = 0;
+              $scope.countPlace = 0;
+              $scope.countMontagne = 0;
+              $scope.countVert = 0;
+              $scope.countFroid = 0;
+              $scope.countChaud = 0;
+              $scope.countFrance = 0;
+              $scope.countEtranger = 0;
 
           place = $scope.place;
           weather = $scope.weather;
           land = $scope.land;
 
           if (place === "plage") {
-            $scope.countPlace += 1;
-          }// t.integer  "countbeach"
+              $scope.countPlace += 1;
+          }
+
+          // "countbeach"
           if (place === "montagne") {
             $scope.countMontagne += 1;
-          }// t.integer  "countmountain"
+          }// "countmountain"
           if (place === "auVert") {
             $scope.countVert += 1;
-          }// t.integer  "countoutback"
+          }// "countoutback"
           if (weather === "auFroid") {
             $scope.countFroid += 1;
-          }// t.integer  "countcold"
+          }// "countcold"
           if (weather === "auChaud") {
             $scope.countChaud += 1;
-          }// t.integer  "counthot"
+          }// "counthot"
           if (land === "france") {
             $scope.countFrance += 1;
-          }// t.integer  "countnational"
+          }// "countnational"
           if (land === "etranger") {
             $scope.countEtranger += 1;
           }// "countinternational";
@@ -141,6 +143,11 @@ angular.module('blindTrip')
           console.log("place :" + place);
           console.log("weather :" + weather);
           console.log("land :" + land);
+
+          console.log("scope place :" + $scope.countPlace);
+
+
+
 
         };
 
