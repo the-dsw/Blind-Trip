@@ -1,16 +1,25 @@
+
+
 <!-- home -->
-<div class=" addGroup">
-    <button type="button" class="btn btn-lg btn-info col-sm-offset-8" ng-click="addGroup()">AJOUTER UN GROUPE</button>
+<div class="addGroup" ng-show="view=='createBtn'">
+  <button type="button" class="btn btn-lg btn-info col-sm-offset-8" ng-click="view = 'newGroup'; addGroupName()">CRÉER UN GROUPE</button>
+  <!-- {{users}} -->
 </div>
+
+<!-- buttonGroup -->
+<div class="border" ng-show="groupName == 'LES BRONZES'">
+  <div type="button" class="col-sm-4" ng-click="view = 'whoAmI'">{{groupName}}</div>
+</div>
+
 <!-- progress -->
 
 <!-- newGroup -->
-<div class="border">
+<div class="border" ng-show="view=='newGroup'">
     <form class="form-horizontal">
         <div class="form-group">
-            <label for="inputCreateur" class="col-sm-2 control-label">Organisateur</label>
+            <label for="inputCreateur" class="col-sm-2 control-label">Nom du Groupe</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputCreateur" placeholder="Organisateur" ng-model="createur">
+                <input type="text" class="form-control" id="inputCreateur" placeholder="Nom du Groupe" ng-model="createur">
             </div>
         </div>
 
@@ -85,14 +94,19 @@
                 <input type="text" class="form-control" id="inputAmi9" placeholder="Ton nom" ng-model="ami9">
             </div>
         </div>
+        <div class="form-group">
+            <label for="inputAmi10" class="col-sm-2 control-label">Ami 10</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputAmi10" placeholder="Ton nom" ng-model="ami10">
+            </div>
+        </div>
     </form>
-    <div class="addGroup">
-      <button type="submit" class="btn btn-success col-sm-offset-2 col-sm-8" ng-click="addForm()">ENVOYER</button>
-    </div>
+
+    <button type="button" class="btn btn-success col-sm-offset-2 col-sm-8 paddingBottom" ng-click="view = 'choises'">ENVOYER</button>
 </div>
 
 <!-- choises -->
-<div class="border">
+<div class="border" ng-show="view == 'choises'">
     <form class="form-horizontal">
         <div class="row">
             <div class="col-sm-offset-3 col-md-2">
@@ -147,15 +161,13 @@
             </div>
         </div>
     </form>
-    <div class="addGroup">
-      <button type="submit" class="btn btn-success col-sm-offset-2 col-sm-8 btFrm" ng-click="addDestination()">ENVOYER</button>
-    </div>
+    <button type="submit" class="btn btn-success col-sm-offset-2 col-sm-8 btnFormRadio" ng-click="view = 'btnGroup'">ENVOYER</button>
 </div>
 
 <br/><br/><br/>
 <!-- whoAmI -->
 
-<div class="border">
+<div class="border" ng-show="view == 'whoAmI'">
     <ul ng-repeat="group in groupes">
         <li>
             <h1>{{Los Amigos}}</h1>
@@ -165,8 +177,4 @@
 
 <!-- result -->
 
-<!-- buttonGroup -->
-<div class="border">
-    <button type="button" class="btn btn-default btn-lg btn-block col-sm-4" ng-click="showGroup()">LE GROUPE</button>
-</div>
 <br/><br/><br/>
