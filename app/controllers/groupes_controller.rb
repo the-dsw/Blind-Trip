@@ -1,11 +1,11 @@
 class GroupesController < ApplicationController
 
   def index
-    respond_with Groupes.all
+    respond_with Groupe.all
   end
 
   def new
-    respond_with Groupes.new
+    respond_with Groupe.new
   end
 
   def create

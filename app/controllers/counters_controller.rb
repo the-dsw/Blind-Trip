@@ -18,6 +18,6 @@ class CountersController < ApplicationController
 
   private
   def counter_params
-    params.require(:counter).permit(:countenational, :countinternational, :countmountain, :countbeach, :countoutback, :counthot, :countcold)
+    params.require(:counter).permit(:countnational, :countinternational, :countmountain, :countbeach, :countoutback, :counthot, :countcold)
   end
 end

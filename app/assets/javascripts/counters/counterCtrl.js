@@ -1,9 +1,9 @@
 angular.module('blindTrip')
-  .controller('groupCtrl', [
+  .controller('counterCtrl', [
     '$scope',
-    'groups',
+    'counters',
     //'$http',
-    function($scope, groups) {
+    function($scope, counters) {
 
 
         //$scope.groups = groups.groups;
@@ -87,66 +87,54 @@ angular.module('blindTrip')
         //       $scope.ami8;
         //       $scope.ami9;
         // };
+        counters.getAll();
+        $scope.counters = counters.counters;
 
         $scope.addDestination = function() {
           //if(!$scope.name || $scope.name === '' && !$scope.email || $scope.email === '') { return; }
-          groups.getAll();
-          $scope.groups = groups.groups;
 
-              $scope.countPlace = 0;
-              $scope.countMontagne = 0;
-              $scope.countVert = 0;
-              $scope.countFroid = 0;
-              $scope.countChaud = 0;
-              $scope.countFrance = 0;
-              $scope.countEtranger = 0;
 
           place = $scope.place;
           weather = $scope.weather;
           land = $scope.land;
 
           if (place === "plage") {
-              $scope.countPlace += 1;
+              $scope.countPlace = 1;
           }
-
           // "countbeach"
           if (place === "montagne") {
-            $scope.countMontagne += 1;
+            $scope.countMontagne = 1;
           }// "countmountain"
           if (place === "auVert") {
-            $scope.countVert += 1;
+            $scope.countVert = 1;
           }// "countoutback"
           if (weather === "auFroid") {
-            $scope.countFroid += 1;
+            $scope.countFroid = 1;
           }// "countcold"
           if (weather === "auChaud") {
-            $scope.countChaud += 1;
+            $scope.countChaud = 1;
           }// "counthot"
           if (land === "france") {
-            $scope.countFrance += 1;
+            $scope.countFrance = 1;
           }// "countnational"
           if (land === "etranger") {
-            $scope.countEtranger += 1;
+            $scope.countEtranger = 1;
           }// "countinternational";
 
-          groups.create({
+          counters.create({
             countbeach: $scope.countPlace,
             countmountain: $scope.countMontagne,
             countoutback: $scope.countVert,
             countcold: $scope.countFroid,
             counthot: $scope.countChaud,
             countnational: $scope.countFrance,
-            countinternational: $scope.countEtranger
+            countinternational: $scope.countEtranger,
 
           });
 
           console.log("place :" + place);
           console.log("weather :" + weather);
           console.log("land :" + land);
-
-          console.log("scope place :" + $scope.countPlace);
-
-
 
 
         };

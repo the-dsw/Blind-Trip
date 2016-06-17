@@ -10,12 +10,12 @@ angular.module('blindTrip', ['ui.router', 'templates'])
                     templateUrl: 'users/_users.html',
                     controller: 'userCtrl'
                 })
-                .state('groups', {
-                    url: '/groups',
-                    templateUrl: 'groups/_groups.html',
-                    controller: 'groupCtrl'
+                .state('counters', {
+                    url: '/counters',
+                    templateUrl: 'counters/_counters.html',
+                    controller: 'counterCtrl'
                 });
 
-            $urlRouterProvider.otherwise('groups');
+            $urlRouterProvider.otherwise('counters');
         }
     ]);
